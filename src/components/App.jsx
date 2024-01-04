@@ -3,7 +3,8 @@ import Map from './Map/Map';
 import Autocomplete from './Autocomplete/Autocomplete';
 
 import css from './App.module.css';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import getBrouserLocation from './utils/geo';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -53,6 +54,16 @@ export const App = () => {
     },
     [markers]
   );
+
+  useEffect(() => {
+  getBrouserLocation()
+    .then(curLoc => {
+      setCenter(curLoc);
+    })
+    .catch(defaultLocation => {
+      setCenter(defaultLocation);
+    });
+  },[]);
 
   return (
     <div>
