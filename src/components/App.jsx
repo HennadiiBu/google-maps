@@ -30,7 +30,7 @@ const libraries = ['places'];
 export const App = () => {
   const [center, setCenter] = useState(defaultCenter);
 
-  const [markers, setMarkers] = useState([]);
+  // const [markers, setMarkers] = useState([]);
 
   const [open, setOpen] = useState(false);
 
@@ -46,14 +46,14 @@ export const App = () => {
     setCenter({ lat: lat, lng: lng });
   }, []);
 
-  console.log(center);
 
-  const onMarkerAdd = useCallback(
-    coordinaties => {
-      setMarkers([...markers, coordinaties]);
-    },
-    [markers]
-  );
+
+  // const onMarkerAdd = useCallback(
+  //   coordinaties => {
+  //     setMarkers([...markers, coordinaties]);
+  //   },
+  //   [markers]
+  // );
 
   useEffect(() => {
     getBrouserLocation()
@@ -81,7 +81,7 @@ export const App = () => {
         </button>
       </div>
       {isLoaded ? (
-        <Map center={center} markers={adverts} onMarkerAdd={onMarkerAdd} />
+        <Map center={center} markers={adverts}  />
       ) : (
         <h2>Loading...</h2>
       )}
