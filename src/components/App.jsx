@@ -13,6 +13,8 @@ import getBrouserLocation from './utils/geo';
 import { Dialog } from '@mui/material';
 import Modal from './Modal/Modal';
 
+import 'dotenv/config'
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const defaultCenter = {
