@@ -38,7 +38,7 @@ const Map = ({ center, markers, onMarkerAdd }) => {
     streetViewControl: false,
     rotateControl: false,
     clickableIcons: false,
-    scrollwheel: false,
+    scrollwheel: true,
     disableDoubleClickZoom: true,
     fullscreenControl: false,
     styles: defaultTheme,
@@ -62,7 +62,7 @@ const Map = ({ center, markers, onMarkerAdd }) => {
         onUnmount={onUnmount}
         options={defaultOptions}
       >
-        <CurrentLocationMarker position={center} />
+        {/* <CurrentLocationMarker position={center} /> */}
         {markers.map(({ id, lat, lng, title, desc, price }) => {
           return (
             <MarkerF
