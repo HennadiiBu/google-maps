@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import s from './Map.module.css';
 import { defaultTheme } from './Theme';
-import CurrentLocationMarker from 'components/CurrentLocationMarker/CurrentLocationMarker';
+// import CurrentLocationMarker from 'components/CurrentLocationMarker/CurrentLocationMarker';
 import { Dialog } from '@mui/material';
 import AdvertItem from 'components/AdvertItem/AdvertItem';
 
