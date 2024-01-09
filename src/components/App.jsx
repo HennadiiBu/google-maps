@@ -1,6 +1,8 @@
 import React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 
+import 'dotenv/config'
+
 import { useJsApiLoader } from '@react-google-maps/api';
 import { useSelector } from 'react-redux';
 
@@ -13,7 +15,7 @@ import getBrouserLocation from './utils/geo';
 import { Dialog } from '@mui/material';
 import Modal from './Modal/Modal';
 
-import 'dotenv/config'
+
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
